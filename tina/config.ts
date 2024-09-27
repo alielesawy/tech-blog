@@ -1,8 +1,10 @@
 import { CATEGORIES } from '../src/data/categories.ts'
 import { defineConfig } from 'tinacms'
 
+const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main'
+
 export default defineConfig({
-	branch: 'main',
+	branch,
 	clientId: '85e5b7b1-aa40-4125-a470-99b33dbca8ca', // Get this from tina.io
 	token: '9ba6b2b1add4137fe9f4f971b840b314980b32b4', // Get this from tina.io
 
