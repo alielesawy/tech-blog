@@ -9,7 +9,7 @@
 <hr/>
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdanielcgilibert%2Fblog-template)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danielcgilibert/blog-template)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/alielesawy/tech-blog)
 
 </div>
 
@@ -52,7 +52,7 @@
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss).
 - [Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode).
 
-1. Clona o haz un [fork](https://github.com/danielcgilibert/blog-template/fork) del repositorio:
+1. Clona o haz un [fork](https://github.com/alielesawy/tech-blog/fork) del repositorio:
 
 ```bash
 git@github.com:danielcgilibert/blog-template.git
@@ -99,6 +99,6 @@ pnpm dev
 
 ## 👋 Contribuciones
 
-<a href="https://github.com/danielcgilibert/blog-template/graphs/contributors">
+<a href="https://github.com/alielesawy/tech-blog/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=danielcgilibert/blog-template" />
 </a>
