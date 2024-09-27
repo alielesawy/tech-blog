@@ -1,76 +1,30 @@
-import { CATEGORIES } from '../src/data/categories.ts'
 import { defineConfig } from 'tinacms'
+
+// Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main'
 
 export default defineConfig({
 	branch,
 	clientId: '85e5b7b1-aa40-4125-a470-99b33dbca8ca', // Get this from tina.io
 	token: '9ba6b2b1add4137fe9f4f971b840b314980b32b4', // Get this from tina.io
-	admin: {},
+
 	build: {
 		outputFolder: 'admin',
 		publicFolder: 'public'
 	},
 	media: {
 		tina: {
-			mediaRoot: '/src/assets/images',
-			publicFolder: ''
+			mediaRoot: '',
+			publicFolder: 'public'
 		}
 	},
 	schema: {
 		collections: [
 			{
 				name: 'post',
-				label: 'Blog Post',
-				path: 'src/content/blog',
-				format: 'mdx',
+				label: 'Posts',
+				path: 'content/posts',
 				fields: [
-					{
-						type: 'image',
-						label: 'Cover Image',
-						required: true,
-						name: 'heroImage',
-						description: 'The image used for the cover of the post'
-					},
-
-					{
-						type: 'string',
-						required: true,
-						name: 'category',
-						label: 'Category',
-						description: 'Select an category for this post',
-						options: [...CATEGORIES]
-					},
-					{
-						type: 'string',
-						label: 'description',
-						required: true,
-						name: 'description',
-						description: 'A short description of the post'
-					},
-					{
-						type: 'datetime',
-						name: 'pubDate',
-						label: 'Publication Date',
-						required: true
-					},
-					{
-						name: 'draft',
-						label: 'Draft',
-						type: 'boolean',
-						description: 'If this is checked the post will not be published'
-					},
-					{
-						type: 'string',
-						name: 'tags',
-						required: true,
-						label: 'Tags',
-						description: 'Tags for this post',
-						list: true,
-						ui: {
-							component: 'tags'
-						}
-					},
 					{
 						type: 'string',
 						name: 'title',
@@ -80,24 +34,9 @@ export default defineConfig({
 					},
 					{
 						type: 'rich-text',
+						name: 'body',
 						label: 'Body',
-						name: 'SButton',
-						isBody: true,
-						templates: [
-							// Custom Components
-							{
-								label: 'SButton',
-								name: 'SButton',
-								fields: [
-									{
-										type: 'rich-text',
-										label: 'SButton',
-										name: 'children',
-										isBody: true
-									}
-								]
-							}
-						]
+						isBody: true
 					}
 				]
 			}
