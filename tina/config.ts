@@ -3,8 +3,8 @@ import { defineConfig } from 'tinacms'
 
 export default defineConfig({
 	branch: 'main',
-	clientId: process.env.TINA_CLIENT_ID, // Get this from tina.io
-	token: process.env.TINA_TOKEN!, // Get this from tina.io
+	clientId: '85e5b7b1-aa40-4125-a470-99b33dbca8ca', // Get this from tina.io
+	token: '9ba6b2b1add4137fe9f4f971b840b314980b32b4', // Get this from tina.io
 
 	build: {
 		outputFolder: 'admin',
